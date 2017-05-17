@@ -1,0 +1,7 @@
+
+<h2>{{myTask.title}}</h2>
+<div [ngClass]="{red: !myTask.complete, green: myTask.complete}">
+	<button type="button" name="button" (click)="toggle()">Click to mark <span *ngIf="myTask.complete">in</span>complete</button>
+	<p *ngIf="!myTask.complete">Incomplete</p>
+	<p *ngIf="myTask.complete">Complete</p>
+</div>
